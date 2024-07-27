@@ -10,7 +10,6 @@ const int ledS2Pin = 5;
 
 int stepsPerRevolution = 200; // Change as per your stepper motor
 int currentStep = 0; // Track the current step position
-int currentWavelength = 400; // Assume initial wavelength is 400nm
 const int maxSteps = 10000; // Define maximum allowable steps to the right (adjust based on your hardware)
 
 int stepsPerWavelength = 0;
@@ -63,7 +62,6 @@ void homeStepperMotor() {
   Serial.println(analogRead(photodiodeS2Pin));
   
   currentStep = 0; // Set home position
-  currentWavelength = 400; // Assume the home position corresponds to 400nm
   Serial.println("Homed to initial position.");
   Serial.println("Enter the target wavelength:");
 }
